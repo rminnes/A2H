@@ -1,0 +1,16 @@
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.csprojResolveAssemblyReference.cache
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\ATH.Models.dll.config
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\ATH.Models.dll
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\ATH.Models.pdb
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\EntityFramework.dll
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\EntityFramework.SqlServer.dll
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\EntityFramework.xml
+c:\webs\AccessToHomes\ATH.Models\bin\Debug\EntityFramework.SqlServer.xml
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.dll
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.pdb
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.Initial.resources
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.csproj.GenerateResource.Cache
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.listingimages.resources
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.listingimagesupdate.resources
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.Addlistingaddress.resources
+c:\webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.AddlettingAgents.resources

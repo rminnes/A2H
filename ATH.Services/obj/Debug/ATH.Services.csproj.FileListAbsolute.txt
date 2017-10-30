@@ -1,0 +1,12 @@
+c:\webs\AccessToHomes\ATH.Services\obj\Debug\ATH.Services.csprojResolveAssemblyReference.cache
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\ATH.Services.dll.config
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\ATH.Services.dll
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\ATH.Services.pdb
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\ATH.Models.dll
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\EntityFramework.dll
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\EntityFramework.SqlServer.dll
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\ATH.Models.pdb
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\EntityFramework.xml
+c:\webs\AccessToHomes\ATH.Services\bin\Debug\EntityFramework.SqlServer.xml
+c:\webs\AccessToHomes\ATH.Services\obj\Debug\ATH.Services.dll
+c:\webs\AccessToHomes\ATH.Services\obj\Debug\ATH.Services.pdb

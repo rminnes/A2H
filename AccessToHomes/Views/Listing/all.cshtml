@@ -1,0 +1,157 @@
+﻿@model AccessToHomes.Models.ViewModels.MapVM
+@{
+    ViewBag.Title = "all";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dv-listing {
+    overflow:hidden;
+
+    }
+
+        .dv-listing a img{
+    width:100%;
+    max-width:200px;
+
+    }
+
+</style>
+
+<div class="container">
+
+    <!-- Page Heading -->
+    <h1 class="my-4">
+        Search Results
+    </h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="dv-filters">
+                <div class="row">
+                    
+                    <label for="searchPostcode" style="display:none;">Postcode</label>
+                    @Html.TextBoxFor(m => Model.Postcode, new { @class = "form-control" })
+
+                    <label for="searchRadius" style="display:none;">Distance</label>
+                    @Html.DropDownListFor(model => model.Distance, Model.DistanceList, "Within....", new { @class = "form-control" })
+
+
+                    <input type="submit" value="Search" class="btn btn-default" onclick="searchLoad(true)" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 listing-container"></div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/handlebars")
+    <script id="listing-template" type="text/x-handlebars-template">
+        {{#.}}
+        <div class="row">
+            <div class="col-md-3 dv-listing">
+                <a href="#">
+                    <img class="rounded mb-3 mb-md-0" height="200" width="200" src="{{this.FirstImage}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-9"><a href="@Url.Action("View", "Listing")/{{this.Id}}">{{this.Title}}</a></div>
+                    <div class="col-md-3">£{{this.Price}} pcm</div>
+                </div>
+
+                <p>{{this.ShortDescription}}</p>
+            </div>
+        </div>
+        <hr />
+        {{/.}}
+
+    </script>
+
+<script src="~/Scripts/Page Scripts/Map.js"></script>
+
+    <script>
+
+        var count = 0;
+        var take = 3;
+        var searchPostcode = '';
+
+        function pageLoad()
+        {
+            searchLoad(true);            
+        }
+
+        function searchLoad(clear) {
+            var radi = parseFloat($("#Distance").val());
+
+            if (clear) {
+                count = 0;
+                $(".listing-container").empty();
+                searchPostcode = $("#Postcode").val();
+            }
+
+            if (searchPostcode != '') {
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ 'address': searchPostcode + ", UK" }, function (results, status) {
+
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var location = results[0].geometry.location + '';
+                        var lnglat = location.replace('(', '').replace(')', '').split(',');
+
+                        GetData('/api/listingapi/getlistings?count=' + count + '&take=' + take + '&distance=' + radi + '&lat=' + lnglat[0] + '&lng=' + lnglat[1]);
+
+                    }
+                });
+            }
+            else {
+                GetData('/api/listingapi/getlistings?count=' + count + '&take=' + take);
+            }         
+
+        };
+  
+        function LoadListing(listings) {
+
+            if (listings.length > 0) {
+                // handlebars stuff to load the event template
+                var source = $("#listing-template").html();
+                var template = Handlebars.compile(source);
+                var html = "";
+                html = template(listings);
+                $(".listing-container").append(html);
+            }
+
+        }
+
+        function GetData(url)
+        {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    LoadListing(data);
+                    count = count + take;
+                },
+                error: function () {
+                    alert("Error retriving data... Please try again later.");
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            var win = $(window);
+
+            // Each time the user scrolls
+            win.scroll(function () {
+                // End of the document reached?
+                if ($(document).height() - win.height() == win.scrollTop()) {
+                    //$('#loading').show();
+                    searchLoad(false);
+                }
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,61 @@
+﻿@model AccessToHomes.Models.ViewModels.HomeVM
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .center-div {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        height: 100px;
+        border-radius: 3px;
+    }
+</style>
+
+@using (Html.BeginForm("Map", "Listing", FormMethod.Post, new { id = "form1" }))
+{
+    <div class="center-div">
+        <h2>Search Location</h2>
+        @Html.TextBoxFor(m => Model.Location, new { @class = "form-control" })
+        @Html.DropDownListFor(model => model.Distance, Model.DistanceList, "Within....", new { @class = "selectpicker form-control" })
+        <div>
+            <input type="submit" value="Search" class="form-control" />
+        </div>
+    </div>
+
+
+
+}
+
+@*<div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Filter by</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Contains</a></li>
+                            <li><a href="#its_equal">It's equal</a></li>
+                            <li><a href="#greather_than">Greather than ></a></li>
+                            <li><a href="#less_than">Less than < </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>*@
+

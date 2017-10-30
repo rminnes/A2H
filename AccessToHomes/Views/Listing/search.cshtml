@@ -1,0 +1,56 @@
+﻿@model AccessToHomes.Models.ViewModels.MapVM
+@{
+    ViewBag.Title = "search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dv-listing {
+        overflow: hidden;
+    }
+
+        .dv-listing a img {
+            width: 100%;
+            max-width: 200px;
+        }
+</style>
+
+<h2>search</h2>
+
+
+
+
+<div class="container">
+
+    <!-- Page Heading -->
+    <h1 class="my-4">
+        Search Results
+    </h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="dv-filters">
+                <div class="row">
+
+                    <label for="searchPostcode" style="display:none;">Postcode</label>
+                    @Html.TextBoxFor(m => Model.Postcode, new { @class = "form-control" })
+
+                    <label for="searchRadius" style="display:none;">Distance</label>
+                    @Html.DropDownListFor(model => model.Distance, Model.DistanceList, "Within....", new { @class = "form-control" })
+
+
+                    <input type="submit" value="Search" class="btn btn-default" onclick="searchLoad(true)" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 listing-container" id="content"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/react/react.min.js"></script>
+    <script src="~/Scripts/Page Scripts/search.jsx"></script>
+    
+
+}

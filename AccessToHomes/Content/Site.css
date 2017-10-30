@@ -1,0 +1,78 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 400px;
+}
+
+    textarea.form-control {
+        height: 150px;
+    }
+
+
+.dv-list-img {
+    height: 500px;
+    overflow: hidden;
+}
+
+
+/* Map page */
+
+    #map_canvas {
+        width: 100%;
+        height: 500px;
+    }
+
+    #wrapper {
+        position: relative;
+    }
+
+    #over_map {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: black;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        display: none;
+    }
+
+    .dv-listing-peek {
+        padding-top: 15px;
+    }
+
+    .list-img {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .dv-listing-peek img {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    .search-bar {
+        /*position: relative;*/
+        top: 10px;
+        padding: 5px;
+    }
