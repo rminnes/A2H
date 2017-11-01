@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using System.Web.Optimization.React;
 
 namespace AccessToHomes
 {
@@ -16,6 +17,10 @@ namespace AccessToHomes
 
             bundles.Add(new ScriptBundle("~/bundles/handlebars").Include(
             "~/Scripts/handlebars.js*"));
+
+            bundles.Add(new BabelBundle("~/bundles/main").Include(
+                "~/Scripts/page scripts/search.jsx"
+            ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
