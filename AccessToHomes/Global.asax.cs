@@ -11,6 +11,8 @@ using AccessToHomes.Modules;
 using System.Web.Http;
 using System.Web.Routing;
 using AccessToHomes.Code.Autofac;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
 
 namespace AccessToHomes
 {
@@ -21,6 +23,9 @@ namespace AccessToHomes
             Bootstrapper.Run();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+    //        GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(
+    //new QueryStringMapping("type", "json", new MediaTypeHeaderValue("application/json")));
 
             //Autofac Configuration
             var builder = new Autofac.ContainerBuilder();

@@ -60,5 +60,18 @@ namespace AccessToHomes.Controllers
 
             return View();
         }
+
+
+        public ActionResult Results()
+        {
+            return View(new MapVM { Postcode = "G1", Distance = 25000 });
+        }
+
+        [HttpPost]
+        public ActionResult Results(HomeVM model)
+        {
+            return View(new MapVM { Postcode = model.Location, Distance = model.Distance });
+        }
+
     }
 }

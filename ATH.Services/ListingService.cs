@@ -1,4 +1,5 @@
 ﻿using ATH.Models;
+using GoogleMaps.LocationServices;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -91,6 +92,18 @@ namespace ATH.Services
             }
          
             Update(list);
+        }
+
+        public string LatLngFromPostcode(string pc)
+        {
+
+            var locationService = new GoogleLocationService();
+            var point = locationService.GetLatLongFromAddress(pc + ", UK");
+
+            var latitude = point.Latitude;
+            var longitude = point.Longitude;
+
+            return latitude+  ", " + longitude;
         }
     }
 }

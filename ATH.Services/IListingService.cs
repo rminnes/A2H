@@ -21,5 +21,7 @@ namespace ATH.Services
 
 
         void AddImages(Listing list, HttpPostedFileBase[] imgs);
+
+        string LatLngFromPostcode(string pc);
     }
 }

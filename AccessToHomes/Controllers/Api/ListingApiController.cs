@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 using AccessToHomes.Code.Factory;
 using AccessToHomes.Models.ViewModels;
+using Newtonsoft;
 
 namespace AccessToHomes.Controllers.Api
 {
@@ -28,6 +29,16 @@ namespace AccessToHomes.Controllers.Api
         }
 
         [HttpGet]
+        public List<DisplayListingVM> GetListingsJson()
+        {
+
+
+            var listings = _lService.GetListings().Create();
+            return listings;
+        }
+
+        
+        [HttpGet]
         public List<DisplayListingVM> GetListings(int count, int take)
         {
             var listings = _lService.GetListings(count, take).Create();
@@ -39,6 +50,12 @@ namespace AccessToHomes.Controllers.Api
         {
             var listings = _lService.GetListings(count, take, distance, lat, lng).Create();
             return listings;
+        }
+
+        [HttpGet]
+        public string GetLatLng(string location)
+        {
+           return _lService.LatLngFromPostcode(location);
         }
 
     }

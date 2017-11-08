@@ -41,7 +41,10 @@
             </div>
         </div>
         <div class="col-md-9 listing-container" id="content">
-            @Html.React("App", new { pollInterval=2000 })
+            @Html.React("App", new {
+            Postcode = "G1 3NA",
+            Distance=100000
+            })
 
    
 
