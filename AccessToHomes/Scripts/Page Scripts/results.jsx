@@ -90,7 +90,7 @@ const Listing = (props) =>
                 <div className="item-entry overflow">
                     <h5><a href={"/listing/view/" + props.Id}>{props.Title}</a></h5>
                     <div className="dot-hr"></div>
-                    <span className="pull-left"><b> Area :</b> 120m </span>
+                    <span className="pull-left">{props.Address}</span>
                     <span className="proerty-price pull-right">£{props.Price} pcm</span>
                     <p >{props.ShortDescription}</p>
                     <div className="property-icon">
@@ -159,7 +159,7 @@ return (
     this.ListingCount = this.ListingCount +newData.length;
     this.setState(prevState => ({ data:newData , count : prevState.count + newData.length }) );
     }
-    //console.log(this.ListingCount);
+
 
     }.bind(this);
     xhr.send();
@@ -177,16 +177,6 @@ return (
     },
 
     componentDidMount: function() {
-
-    //var xhr = new XMLHttpRequest();
-    //xhr.open('get', '/api/listingapi/getlatlng?location=' +  this.props.Postcode , true);
-    //xhr.onload = function() {
-    //    var ltlng = JSON.parse(xhr.responseText);
-    //    this.setState({coords:ltlng, distance: this.props.Distance});
-    //    this.loadListingsFromServer();
-    //  return ltlng;
-    //}.bind(this);
-    //xhr.send();
 
     this.state.coords='55.8642, -4.2518';
     this.state.distance=this.props.Distance;

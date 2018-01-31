@@ -10,11 +10,6 @@ getInitialState: function() {
  handleDistanceChange: function(e) {
     this.setState({distance: e.target.value});
   },
-    getLatLng: function(postcode){
-
-
-
-    },
   handleSubmit: function(e) {
     e.preventDefault();
         var pc = this.state.postCode.trim();
@@ -127,8 +122,6 @@ var App = React.createClass({
                 this.ListingCount = this.ListingCount +newData.length;
                 this.setState(prevState => ({ data:newData , count : prevState.count + newData.length }) );
             }
-            //console.log(this.ListingCount);
-
         }.bind(this);
         xhr.send();
     },
@@ -144,18 +137,7 @@ var App = React.createClass({
     }
   },
 
-  componentDidMount: function() {
-
-        //var xhr = new XMLHttpRequest();
-        //xhr.open('get', '/api/listingapi/getlatlng?location=' +  this.props.Postcode , true);
-        //xhr.onload = function() {
-        //    var ltlng = JSON.parse(xhr.responseText);
-        //    this.setState({coords:ltlng, distance: this.props.Distance});
-        //    this.loadListingsFromServer();
-        //  return ltlng;
-        //}.bind(this);
-        //xhr.send();
-     
+  componentDidMount: function() {    
         this.state.coords='55.8642, -4.2518';
         this.state.distance=this.props.Distance;
         this.loadListingsFromServer();

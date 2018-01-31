@@ -13,3 +13,4 @@ C:\Webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.Migrations.AddlettingAgent
 C:\Webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.csproj.GenerateResource.Cache
 C:\Webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.dll
 C:\Webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.pdb
+C:\Webs\AccessToHomes\ATH.Models\obj\Debug\ATH.Models.csprojResolveAssemblyReference.cache

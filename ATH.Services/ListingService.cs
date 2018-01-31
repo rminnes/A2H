@@ -23,21 +23,37 @@ namespace ATH.Services
             _dbset = _context.Set<Listing>();
         }
 
+        /// <summary>
+        /// Returns all listings
+        /// </summary>
+        /// <returns></returns>
         public List<Listing> GetListings()
         {
             return _context.Listings.Include(l => l.Images).ToList();
-
         }
 
+        /// <summary>
+        /// Returns a number of lisitngs
+        /// </summary>
+        /// <param name="count"></param>
+        /// <param name="take"></param>
+        /// <returns></returns>
         public List<Listing> GetListings(int count, int take)
         {
             return _context.Listings.OrderBy(l=>l.Id).Skip(count).Take(take).Include(l => l.Images).ToList();
         }
 
+        /// <summary>
+        /// Gets the requested number of listings based on a centre point and distance form that point
+        /// </summary>
+        /// <param name="count"></param>
+        /// <param name="take"></param>
+        /// <param name="distance"></param>
+        /// <param name="lat"></param>
+        /// <param name="lng"></param>
+        /// <returns></returns>
         public List<Listing> GetListings(int count, int take, int distance, double lat, double lng )
         {
-            // get a
-
             var allListings = _context.Listings.Include(l => l.Images).ToList() ;
             var returnListings = new List<Listing>();
 
@@ -55,9 +71,16 @@ namespace ATH.Services
 
             return returnListings.Skip(count).Take(take).ToList();
 
-            //return _context.Listings.OrderBy(l => l.Id).Skip(count).Take(take).Include(l => l.Images).ToList();
         }
 
+        /// <summary>
+        /// get the distance between two points based on the lat/lng
+        /// </summary>
+        /// <param name="lng1"></param>
+        /// <param name="lat1"></param>
+        /// <param name="lgn2"></param>
+        /// <param name="lat2"></param>
+        /// <returns></returns>
         private double Getdistance(double lng1, double lat1, double lgn2, double lat2)
         {
             var sCoord = new GeoCoordinate(lng1, lat1);
@@ -68,7 +91,7 @@ namespace ATH.Services
 
         public Listing GetById(long Id)
         {
-            return _dbset.Include(l => l.Images).FirstOrDefault(x => x.Id == Id);
+            return _dbset.Include(l => l.Images).Include(l=>l.Agent).FirstOrDefault(x => x.Id == Id);
         }
         /// <summary>
         /// Adds images to an existing listing
@@ -94,6 +117,11 @@ namespace ATH.Services
             Update(list);
         }
 
+        /// <summary>
+        /// Get the lat/lng from google based on the postcode o location
+        /// </summary>
+        /// <param name="pc"></param>
+        /// <returns></returns>
         public string LatLngFromPostcode(string pc)
         {
 

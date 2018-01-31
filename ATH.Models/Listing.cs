@@ -16,7 +16,11 @@ namespace ATH.Models
         public int Price { get; set; }
         public string Postcode { get; set; }
         public string LatLong { get; set; }
+        public int Bedrooms { get; set; }
 
+        public bool Furnished { get; set; }
+        public DateTime AvaiableDate { get; set; }
+        public string Features { get; set; }
         public ICollection<ListingImage> Images { get; set; }
 
         public LettingAgent Agent { get; set;}

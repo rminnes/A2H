@@ -2002,7 +2002,7 @@ single property page
     margin-top: -35px;
 }
 .single-property-header {
-    padding-bottom: 25px;
+    padding-bottom: 0px; /* formerly 25px */
     position: relative;
     clear: both;
     overflow: hidden;

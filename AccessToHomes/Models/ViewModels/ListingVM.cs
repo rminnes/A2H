@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATH.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -34,6 +35,8 @@ namespace AccessToHomes.Models.ViewModels
         [Display(Name = "Postcode")]
         public string Postcode { get; set; }
         public string LongLat { get; set; }
+        public int Bedrooms { get; set; }
+        public bool Furnished { get; set; }
     }
 
     public class ListingVM : BaseListingVM
@@ -49,6 +52,9 @@ namespace AccessToHomes.Models.ViewModels
 
         public string FirstImage { get; set; }
         public List<string> Images { get; set; }
+
+        public LettingAgent Agent { get; set; }
+
     }
 
 }

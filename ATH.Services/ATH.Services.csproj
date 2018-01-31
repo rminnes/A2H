@@ -82,7 +82,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgentService.cs" />
     <Compile Include="EntityService.cs" />
+    <Compile Include="IAgentService.cs" />
     <Compile Include="IEntityService.cs" />
     <Compile Include="IListingService.cs" />
     <Compile Include="IService.cs" />

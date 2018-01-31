@@ -33,7 +33,7 @@ namespace AccessToHomes.Controllers
         [HttpPost]
         public ActionResult Map(HomeVM model)
         {
-            return View(new MapVM { Postcode=model.Location, Distance=model.Distance});
+            return View(new MapVM { Postcode=model.Location, Distance=model.Distance });
         }
 
         public ActionResult All()
