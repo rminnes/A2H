@@ -12,6 +12,7 @@ using AccessToHomes.Models;
 
 namespace AccessToHomes.Controllers
 {
+    // adding a comment for a git test
     [Authorize]
     public class AccountController : Controller
     {
