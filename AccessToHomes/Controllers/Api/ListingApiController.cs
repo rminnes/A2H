@@ -53,6 +53,13 @@ namespace AccessToHomes.Controllers.Api
         }
 
         [HttpGet]
+        public DisplayListingVM GetListing(long id)
+        {
+            var listing = _lService.GetById(id).Create();
+            return listing;
+        }
+
+        [HttpGet]
         public string GetLatLng(string location)
         {
            return _lService.LatLngFromPostcode(location);
