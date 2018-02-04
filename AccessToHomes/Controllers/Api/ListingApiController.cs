@@ -52,6 +52,11 @@ namespace AccessToHomes.Controllers.Api
             return listings;
         }
 
+        /// <summary>
+        /// Get a single listing based on id
+        /// </summary>
+        /// <param name="id">listing id</param>
+        /// <returns></returns>
         [HttpGet]
         public DisplayListingVM GetListing(long id)
         {
@@ -59,6 +64,11 @@ namespace AccessToHomes.Controllers.Api
             return listing;
         }
 
+        /// <summary>
+        /// Get the Lat/Lng based on the location entered
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
         [HttpGet]
         public string GetLatLng(string location)
         {
