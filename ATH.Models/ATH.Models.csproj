@@ -77,6 +77,18 @@
     <Compile Include="Migrations\201710121151367_AddlettingAgents.Designer.cs">
       <DependentUpon>201710121151367_AddlettingAgents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803011307482_test.cs" />
+    <Compile Include="Migrations\201803011307482_test.Designer.cs">
+      <DependentUpon>201803011307482_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021957473_listingdatenullable.cs" />
+    <Compile Include="Migrations\201803021957473_listingdatenullable.Designer.cs">
+      <DependentUpon>201803021957473_listingdatenullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803031913414_correctingLettingAgentError.cs" />
+    <Compile Include="Migrations\201803031913414_correctingLettingAgentError.Designer.cs">
+      <DependentUpon>201803031913414_correctingLettingAgentError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +111,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710121151367_AddlettingAgents.resx">
       <DependentUpon>201710121151367_AddlettingAgents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011307482_test.resx">
+      <DependentUpon>201803011307482_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021957473_listingdatenullable.resx">
+      <DependentUpon>201803021957473_listingdatenullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803031913414_correctingLettingAgentError.resx">
+      <DependentUpon>201803031913414_correctingLettingAgentError.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

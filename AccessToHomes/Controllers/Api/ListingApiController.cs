@@ -75,5 +75,14 @@ namespace AccessToHomes.Controllers.Api
            return _lService.LatLngFromPostcode(location);
         }
 
+        [HttpPost]        
+        public bool AddListing([FromBody]ListingVM model)
+        {
+            var listing = new ATH.Models.Listing { CreatedBy = "MinnesR", CreatedDate = DateTime.Now, Postcode = model.Postcode, LatLong = model.LongLat, LongDescription = model.LongDescription, Price = model.Price, ShortDescription = model.ShortDescription, Title = model.Title, UpdatedBy = "Minnesr", UpdatedDate = DateTime.Now };
+            _lService.Create(listing);
+
+            return true;
+        }
+
     }
 }

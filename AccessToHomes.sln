@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessToHomes", "AccessToHomes\AccessToHomes.csproj", "{6A22427D-C517-449F-99CC-68CFA0435940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessToHomes.Tests", "AccessToHomes.Tests\AccessToHomes.Tests.csproj", "{FCAD09FA-22FB-421C-A196-3D375898985C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATH.Tests", "AccessToHomes.Tests\ATH.Tests.csproj", "{FCAD09FA-22FB-421C-A196-3D375898985C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATH.Models", "ATH.Models\ATH.Models.csproj", "{10CB1885-5101-45A3-8AAA-3249A47FC123}"
 EndProject

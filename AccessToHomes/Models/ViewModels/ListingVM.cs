@@ -41,6 +41,11 @@ namespace AccessToHomes.Models.ViewModels
 
     public class ListingVM : BaseListingVM
     {
+        public ListingVM()
+        {
+            Files = new HttpPostedFileBase[0];
+        }
+
 
         [Display(Name = "Images")]
         public HttpPostedFileBase[] Files { get; set; }
@@ -48,6 +53,11 @@ namespace AccessToHomes.Models.ViewModels
 
     public class DisplayListingVM : BaseListingVM
     {
+        public DisplayListingVM()
+            {
+            Images = new List<string>();
+            }
+
         public long Id { get; set; }
 
         public string FirstImage { get; set; }

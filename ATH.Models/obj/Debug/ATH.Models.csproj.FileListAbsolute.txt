@@ -30,3 +30,6 @@ C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.Migrations.AddlettingAgents.reso
 C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.csproj.GenerateResource.Cache
 C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.dll
 C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.pdb
+C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.Migrations.test.resources
+C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.Migrations.listingdatenullable.resources
+C:\Webs\A2H\A2H\ATH.Models\obj\Debug\ATH.Models.Migrations.correctingLettingAgentError.resources

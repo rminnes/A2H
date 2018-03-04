@@ -51,6 +51,11 @@ namespace AccessToHomes.Controllers
             return View();
         }
 
+        public ActionResult AngListing()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult AddListing(ListingVM model)
         {
@@ -58,6 +63,11 @@ namespace AccessToHomes.Controllers
             _lService.Create(listing);
             _lService.AddImages(listing, model.Files);
 
+            return View();
+        }
+
+        public ActionResult AddListingAng()
+        {
             return View();
         }
 
