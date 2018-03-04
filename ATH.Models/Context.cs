@@ -12,7 +12,9 @@ namespace ATH.Models
 {
     public interface IContext
     {
-        IDbSet<Listing> Listings { get; set; }
+        DbSet<Listing> Listings { get; set; }
+
+        DbSet<LettingAgent> LettingAgents { get; set; }
 
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
@@ -30,9 +32,9 @@ namespace ATH.Models
             this.Configuration.LazyLoadingEnabled = false; 
         }
 
-        public IDbSet<Listing> Listings { get; set; }
+        public virtual DbSet<Listing> Listings { get; set; }
 
-        public IDbSet<ListingImage> LettingAgents { get; set; }
+        public virtual DbSet<LettingAgent> LettingAgents { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "AddListingAng";
+    Layout = "~/Views/Shared/_AngularLayout.cshtml";
+}
+
+<h2>AddListingAng</h2>
+
+<div ng-app="listingsApp" ng-controller="addListingCtrl">
+
+    Title : <input ng-model="title" /><br /><br />
+
+    Address : <input ng-model="address" /><br /><br />
+
+    Short Description : <input ng-model="shortDesc" /><br /><br />
+    Long Description : <input ng-model="longDesc" /><br /><br />
+    Price : <input ng-model="price" /><br /><br />
+    Postcode : <input ng-model="postcode" /><br /><br />
+    Bedrooms : <input ng-model="bedrooms" /><br /><br />
+    Furnished : <input ng-model="furnished" type="checkbox" /><br /><br />
+
+    <input type="button" value="Send" ng-click="submitForm()" /> <br /><br />
+
+</div>
+
+
+@section BottomScripts {
+
+    <script src="/Scripts/angular/listingApp.js"></script>
+    <script src="/Scripts/angular/controllers/listingController.js"></script>
+    <script src="/Scripts/angular/services/listingService.js"></script>
+}

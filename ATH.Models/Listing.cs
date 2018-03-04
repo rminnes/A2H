@@ -19,7 +19,7 @@ namespace ATH.Models
         public int Bedrooms { get; set; }
 
         public bool Furnished { get; set; }
-        public DateTime AvaiableDate { get; set; }
+        public DateTime? AvaiableDate { get; set; }
         public string Features { get; set; }
         public ICollection<ListingImage> Images { get; set; }
 

@@ -104,6 +104,8 @@ namespace ATH.Services
             var count = 1;
             foreach (var file in imgs)
             {
+                if (file != null)
+                {
                 string ext = Path.GetExtension(file.FileName);
                 var dir = string.Format(@"C:\Webs\AccessToHomes\AccessToHomes\images\listings\{0}", list.Id);
                 System.IO.Directory.CreateDirectory(dir);
@@ -112,6 +114,8 @@ namespace ATH.Services
                 file.SaveAs(path);
                 list.Images.Add(new ListingImage { FileLocation = realtivePath });
                 count++;
+                }
+                
             }
          
             Update(list);

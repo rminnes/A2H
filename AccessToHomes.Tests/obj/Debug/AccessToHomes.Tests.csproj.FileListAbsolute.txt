@@ -130,7 +130,6 @@ C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFr
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\ATH.Models.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\ATH.Services.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Web.Optimization.React.dll
-C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\EntityFramework.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\React.Core.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Web.Http.WebHost.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Net.Http.Formatting.dll
@@ -165,7 +164,6 @@ C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFr
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\ATH.Models.pdb
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\ATH.Services.pdb
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Web.Optimization.React.xml
-C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\EntityFramework.xml
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\React.Core.xml
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Net.Http.Formatting.xml
@@ -184,3 +182,12 @@ C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\ru-ru\MsieJavaScriptEngine.resourc
 C:\Webs\A2H\A2H\AccessToHomes.Tests\obj\Debug\AccessToHomes.Tests.csprojResolveAssemblyReference.cache
 C:\Webs\A2H\A2H\AccessToHomes.Tests\obj\Debug\AccessToHomes.Tests.dll
 C:\Webs\A2H\A2H\AccessToHomes.Tests\obj\Debug\AccessToHomes.Tests.pdb
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Castle.Core.dll
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Moq.dll
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.ValueTuple.dll
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Castle.Core.xml
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Moq.pdb
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\Moq.xml
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Webs\A2H\A2H\AccessToHomes.Tests\bin\Debug\System.ValueTuple.xml
